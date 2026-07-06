@@ -16,7 +16,7 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-#include "Math.h"
+#include "utils/Math.h"
 
 class Entity{
 public:

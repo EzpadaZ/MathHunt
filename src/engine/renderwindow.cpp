@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-#include "RenderWindow.h"
+#include "engine/RenderWindow.h"
 #include <iostream>
 
 
@@ -33,11 +33,16 @@ SDL_Texture* RenderWindow::cargarTextura(const char* path){
     return textura;
 }
 
+SDL_Renderer* RenderWindow::getRenderer() const {
+	return renderer;
+}
+
 void RenderWindow::limpiarPantalla(){
     SDL_RenderClear(renderer);
 }
 
 void RenderWindow::limpiar(){
+	SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
 }
 

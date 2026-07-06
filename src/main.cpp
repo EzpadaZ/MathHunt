@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   main.cpp
  * Author: Jorge
@@ -12,16 +6,15 @@
  */
 
 
-/*
- * 
- */
-
 #include <iostream>
 
-#include "RenderWindow.h"
+#include "engine/RenderWindow.h"
+#include "managers/TextureManager.h"
+#include "engine/GameState.h"
+
 RenderWindow window;
-SDL_Texture* debugTexture;
 bool gameRunning = true;
+GameState gameState = GameState::Title;
 
 bool init(){
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0){
@@ -36,20 +29,21 @@ bool init(){
     
     SDL_ShowCursor(SDL_DISABLE); // adios cursor.
     window.crear("MathHunt - C++ Engine Test", 1280,720);
-    debugTexture = window.cargarTextura("images/debug.png");
     return true;
 }
 
-bool loadingPass = init();
-Entity debugEntity(Vector2f((1280/2)-64,(720/2)-64),debugTexture,64,64);
-void gameLoop(){
+void gameLoop(Entity& debugEntity){
     SDL_Event event;
     while(SDL_PollEvent(&event)){
         switch(event.type){
             case SDL_QUIT:
                 gameRunning = false;
                 break;
-            // aqui van los eventos.
+            case SDL_KEYDOWN:
+                if (event.key.keysym.sym == SDLK_RETURN && gameState == GameState::Title){
+                    gameState = GameState::Playing;
+                }
+                break;
         }
     }
     
@@ -61,13 +55,41 @@ void gameLoop(){
 
 
 int main(int argc, char** argv) {
+    if (!init())
+    {
+        std::cout << "No se pudo iniciar MathHunt.\n";
+        return 1;
+    }
+
+    TextureManager textures(window.getRenderer());
+
+    if (!textures.load("debug", "images/debug.png")) return 1;
+    if (!textures.load("stage", "images/stage.png")) return 1;
+
+    Entity debugEntity(
+        Vector2f((1280 / 2) - 64, (720 / 2) - 64),
+        textures.get("debug"),
+        64,
+        64
+    );
+
+    Entity stageEntity(
+        Vector2f(0, 0),
+        textures.get("stage"),
+        1280,
+        769
+    );
+
     // Main File
     while(gameRunning)
     {
-        gameLoop();
+        gameLoop(debugEntity);
         SDL_Delay(16);
     }
+
+    textures.clear();
     window.limpiar();
+    IMG_Quit();
     SDL_Quit();
     return 0;
 }

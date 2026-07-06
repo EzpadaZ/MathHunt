@@ -16,13 +16,14 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-#include "Entity.h"
+#include "entities/Entity.h"
 
 class RenderWindow{
 public:
     RenderWindow();
     void crear(const char* titulo, int width, int height);
     SDL_Texture* cargarTextura(const char* path);
+    SDL_Renderer* getRenderer() const;
     void limpiarPantalla();
     void limpiar();
     void render(Entity& entity, bool scaled);

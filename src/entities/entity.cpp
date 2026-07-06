@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 
-#include "Entity.h"
-#include "Math.h"
+#include "entities/Entity.h"
 
 const int DEFAULT_SIZE = 50; // el nombre explica que es esto.
 

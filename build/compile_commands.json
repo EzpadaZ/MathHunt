@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/ezpadaz/dev/personal/MathHunt/build",
+  "command": "/usr/bin/c++  -I/Users/ezpadaz/dev/personal/MathHunt/src -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.12_1/include/SDL2 -g -std=c++14 -arch arm64 -o CMakeFiles/mathhunt.dir/src/main.cpp.o -c /Users/ezpadaz/dev/personal/MathHunt/src/main.cpp",
+  "file": "/Users/ezpadaz/dev/personal/MathHunt/src/main.cpp",
+  "output": "CMakeFiles/mathhunt.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/ezpadaz/dev/personal/MathHunt/build",
+  "command": "/usr/bin/c++  -I/Users/ezpadaz/dev/personal/MathHunt/src -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.12_1/include/SDL2 -g -std=c++14 -arch arm64 -o CMakeFiles/mathhunt.dir/src/engine/renderwindow.cpp.o -c /Users/ezpadaz/dev/personal/MathHunt/src/engine/renderwindow.cpp",
+  "file": "/Users/ezpadaz/dev/personal/MathHunt/src/engine/renderwindow.cpp",
+  "output": "CMakeFiles/mathhunt.dir/src/engine/renderwindow.cpp.o"
+},
+{
+  "directory": "/Users/ezpadaz/dev/personal/MathHunt/build",
+  "command": "/usr/bin/c++  -I/Users/ezpadaz/dev/personal/MathHunt/src -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.12_1/include/SDL2 -g -std=c++14 -arch arm64 -o CMakeFiles/mathhunt.dir/src/entities/entity.cpp.o -c /Users/ezpadaz/dev/personal/MathHunt/src/entities/entity.cpp",
+  "file": "/Users/ezpadaz/dev/personal/MathHunt/src/entities/entity.cpp",
+  "output": "CMakeFiles/mathhunt.dir/src/entities/entity.cpp.o"
+},
+{
+  "directory": "/Users/ezpadaz/dev/personal/MathHunt/build",
+  "command": "/usr/bin/c++  -I/Users/ezpadaz/dev/personal/MathHunt/src -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.12_1/include/SDL2 -g -std=c++14 -arch arm64 -o CMakeFiles/mathhunt.dir/src/utils/math.cpp.o -c /Users/ezpadaz/dev/personal/MathHunt/src/utils/math.cpp",
+  "file": "/Users/ezpadaz/dev/personal/MathHunt/src/utils/math.cpp",
+  "output": "CMakeFiles/mathhunt.dir/src/utils/math.cpp.o"
+},
+{
+  "directory": "/Users/ezpadaz/dev/personal/MathHunt/build",
+  "command": "/usr/bin/c++  -I/Users/ezpadaz/dev/personal/MathHunt/src -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.12_1/include/SDL2 -g -std=c++14 -arch arm64 -o CMakeFiles/mathhunt.dir/src/managers/TextureManager.cpp.o -c /Users/ezpadaz/dev/personal/MathHunt/src/managers/TextureManager.cpp",
+  "file": "/Users/ezpadaz/dev/personal/MathHunt/src/managers/TextureManager.cpp",
+  "output": "CMakeFiles/mathhunt.dir/src/managers/TextureManager.cpp.o"
+},
+{
+  "directory": "/Users/ezpadaz/dev/personal/MathHunt/build",
+  "command": "/usr/bin/c++  -I/Users/ezpadaz/dev/personal/MathHunt/src -isystem /opt/homebrew/include -isystem /opt/homebrew/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.12_1/include/SDL2 -g -std=c++14 -arch arm64 -o CMakeFiles/mathhunt.dir/src/engine/Game.cpp.o -c /Users/ezpadaz/dev/personal/MathHunt/src/engine/Game.cpp",
+  "file": "/Users/ezpadaz/dev/personal/MathHunt/src/engine/Game.cpp",
+  "output": "CMakeFiles/mathhunt.dir/src/engine/Game.cpp.o"
+}
+]
